@@ -1,0 +1,4 @@
+images:
+  - name: 654654554686.dkr.ecr.us-west-1.amazonaws.com/react-frontend-docker
+    newName: 654654554686.dkr.ecr.us-west-1.amazonaws.com/react-frontend-docker
+    newTag: 1.0.0
