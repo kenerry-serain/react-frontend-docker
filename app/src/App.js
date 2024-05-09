@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          EKS Live on Youtube
+          EKS Live on Youtube V1.0
         </p>
         <a
           className="App-link"
