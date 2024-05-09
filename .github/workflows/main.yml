@@ -50,4 +50,6 @@ jobs:
     - name: Kubectl Apply
       working-directory: deployment
       run: |
+       ls
+       cat kustomization.yml
        kubectl apply -k .
