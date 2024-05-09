@@ -3,7 +3,7 @@ on:
   push:
   
 env:            
-  ECR_REPOSITORY: react-frontend-docker          
+  ECR_REPOSITORY: react-frontend-docker 
   
 jobs:
   frontendDeplyoment:
@@ -47,7 +47,14 @@ jobs:
       run: |
        kustomize edit set image $ECR_REGISTRY/$ECR_REPOSITORY=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
+    - name: Update Kubeconfig
+      working-directory: deployment
+      run: |
+       aws eks update-kubeconfig --region us-west-1 --name devops-na-nuvem-week-eks-cluster
+       
     - name: Kubectl Apply
       working-directory: deployment
       run: |
+       ls
+       cat kustomization.yml
        kubectl apply -k .
